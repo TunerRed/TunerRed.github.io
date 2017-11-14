@@ -1,0 +1,288 @@
+/*  1. BASIC
+    ........................................................................................................................................ */
+
+/* 1: 整体设计，基础数值重置 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, big, cite, code, del,
+dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong,
+tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent }
+html, body { height: 100%; }
+body { line-height:1 }
+p,li,h2,h3,h4 {color: #bbbbbb}
+ol, ul { list-style:none }
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0 }
+.clearfix:after { clear:both; content:' '; display:block; font-size:0; line-height:0; visibility:hidden; width:0; height:0 }
+.clearfix { display:inline-block }
+* html .clearfix { height:1% }
+
+/* 2: 主页 */
+h1  { font: normal 24px "CardoRegular", serif;
+    background: transparent url(../images/line.png) repeat-x 0px 30px; display: block; color: #555; padding: 8px 0px 32px 0px; margin-bottom: 30px; height: 1px;
+    text-shadow:1px 1px 0px #fcfcfc; letter-spacing: 1px;
+}
+h2 { font: normal 17px "CardoRegular", serif; margin-bottom: 10px;  }
+h3 { font: normal 15px "CardoRegular", serif; margin-bottom: 10px; margin-top: 2px; }
+h4 { font-size: 12px; font-weight:normal; margin-bottom:10px; }
+
+/* 3: 通常样式 */
+
+body
+{
+    font:  normal 12px 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #889397;
+    overflow-y: scroll; overflow-x: hidden;
+    min-width: 1640px;
+    background: url(../images/bg/background.gif) repeat-y;
+    background-size: cover;
+}
+
+/* links ++++++++++++++++++++++++++++++++++++++++++++ */
+a { outline: none; text-decoration: none; color: #5f6d72; }
+a:hover  { outline: none; text-decoration: none; color: #555;  }
+a img { border: none; }
+
+/* button ++++++++++++++++++++++++++++++++++++++++++++ */
+button {
+  background: #e3e3e3;
+  border: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333;
+  font:bold 11px "Helvetica Neue", helvetica, arial, sans-serif;
+  text-decoration:none;
+  line-height: 1;
+  padding: 5px 0 6px;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  width: 70px;
+}
+
+button:hover {
+  background: #d9d9d9;
+  -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222;
+  cursor: pointer;
+}
+
+button:hover { cursor: pointer; }
+button::-moz-focus-inner { border:0; }
+
+/* bulleted list ++++++++++++++++++++++++++++++++++++++++++++ */
+ul.bullet { padding: 0 0 20px 0; display: block; overflow: hidden; }
+ul.bullet li {
+    line-height: 22px; list-style: none;
+    display: block;
+    background: transparent url(../images/bullet.jpg) no-repeat left 10px;
+    padding-left: 15px;
+}
+
+
+/* 1: inner_tab is the styling for tabs on all pages */
+ul.inner_tab { width: 660px;
+    margin: 0 auto 38px -17px ; height: 14px; }
+ul.inner_tab li{ float: left; border-right: 1px dotted #bebebe; }
+ul.inner_tab li a
+{ float: left;text-transform: uppercase; font: normal 11px "Helvetica Neue", helvetica, arial, sans-serif;
+    color: #54BBDD;
+    margin: 0px 3px 0px 3px; padding: 0px 15px 0px 15px; }
+ul.inner_tab li a:hover { text-decoration: none; color: #54bbdd; }
+
+#wrapper ul.grid
+{ width: 680px; overflow: hidden; margin: -20px 0 0px -21px; padding: 12px; }
+ul.grid:after
+{ content: ""; display: block; height: 0; overflow: hidden; clear: both; }
+ul.grid li {
+    width: 155px; height: 102px;border:1px solid #ccc; margin-left: 10px; float: left; overflow: hidden; background: #fafafa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    -o-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+ul.grid li a { outline:0;  }
+ul.grid li img { display: block; width: 145px; height: 92px; margin: 5px 0px 0px 5px; }
+.hidden { display: none; }
+
+/* 5: Dividers */
+
+.divider, .divider2, .divider3, .divider4
+{ background: transparent url(../images/diagonal_line.png) repeat-x bottom left; height: 4px; display: block; }
+.divider { margin: 25px 0px 25px 0px; }
+.divider2 { margin: 25px 0px 40px 0px; }
+.divider3 { margin: 40px 0px 45px 0px; }
+.divider4 { margin: 15px 0px 30px 0px; }
+
+/* 6: Image Styles */
+
+img.left, img.featured-left , img.right, img.featured-right , img.featured-single ,#slider_src{
+    float: left; background: #fafafa; padding: 4px; border: 1px solid #ccc;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+/*  2. LAYOUT
+    ........................................................................................................................................ */
+
+/* 1: Header */
+#strip {
+    background-color: black;
+    border-bottom: #efebe8 dotted 1px;
+    repeat-x:0px -15px; height: 83px;
+}
+
+/* 2.Container */
+#container {
+    min-height: 100%; height: auto !important; height: 100%;
+    padding: 0px 0px;
+    margin: 0px auto -57px;
+}
+
+/* 3: Footer */
+
+#footer-wrapper, .push { height: 57px; clear: both;/* .must be the same height as .footer */ }
+#footer-wrapper { height: 45px; padding-top:10px; }
+#footer { min-width: 960px; height: 45px;
+    background-color: black;
+    border-top: #efebe8 dotted 1px;}
+#footer-content a{ border:none; color: #aaa; }
+#footer-content a:hover{border:none; color: #ccc; }
+#footer-content { width: 960px; height: 45px; margin: 0 auto; position: relative; }
+#copyright { float: left; position: absolute; top: 18px;left: 0; }
+#copyright p { font-size: 11px; margin: 0; }
+#back-top {float: right; position: relative; top: 16px; }
+
+
+/* 2.1 head background*/
+#header {width: 960px; height: 45px; margin: 0px auto 80px auto; }
+#header1 {width: 960px; height: 1px; margin: 0px auto 80px auto; }
+
+/* 2.2 head guide */
+ul.guide {margin: 20px 10px 0px 0px; float: right; }
+ul.guide li  { float: right; padding: 0px 8px 0px 0px; font-size: 20px}
+ul.guide a  { border:none;}
+
+/* 2.3 head logo */
+img.logo { margin-top: -20px; float: left; width: 180px; height: 100px;}
+
+#smoothmenu1 {
+    position: relative;float: left;
+    background: rgba(120,140,140,0.2) repeat-y;
+    margin-top: -30px;
+    min-height: 75%;
+}
+
+
+/* 2.4 Main-left */
+
+ul#tab-menu {
+    float:left; width: 200px;
+    font: normal 20px serif; color: #54BBDD;
+    margin: -30px 50px 0 10px; padding: 0px 25px 0px 0px; list-style: none;
+}
+
+ul#tab-menu li {
+    border-bottom: 1px double;
+    cursor: pointer;
+    padding: 30px 0px 10px;
+    margin: 25px auto 25px;
+    color: aqua;
+}
+ul#tab-menu li:hover{ color: #54BBDD; }
+ul#tab-menu li.selected { color:  #6B777C; }
+
+
+/* 2.5 Main-right */
+#wrapper {
+    width: 960px; margin: 0 auto;
+    padding: 0px 0px ; line-height: 20px;
+}
+
+#imgLeft {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 512px;
+    margin-left: 20px;
+    border: inset 5px;
+
+    background-image: url(../images/pic/character/12.png);
+    overflow: hidden;
+    background-position-x: -106px;
+}
+#imgRight {
+    position: relative;
+    float: right;
+    width: 300px;
+    height: 512px;
+    margin-right:  20px;
+    border: inset 5px;
+
+    background-image: url(../images/pic/character/1.png);
+    overflow: hidden;
+    background-position-x: -106px;
+}
+
+.tab-content { line-height: 22px;padding-bottom:80px; background:transparent; width: 660px; float: left; margin-right: 10px}
+/*
+.tab-content div.tab { display: none; padding: 0; }
+.tab-content div.tab.show { display: block; }
+*/
+.tab-content div.tab p { width: 660px; overflow: hidden; padding: 0; margin: 0 0 15px 0;  }
+.tab-content div.tab div p { width: 100%; }
+[hidden] {display: none; padding: 0px;}
+
+
+/* 3 DETAILS
+    ........................................................................................................................................ */
+
+/*1.overview ----------------------------*/
+img.star { margin-top: 0px; float: right; }
+
+#slider_src {
+    height: 300px;
+    width: 400px;
+    border: 0px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+#slider_src:hover{cursor: cell;}
+
+.overview {
+    font-size: 16px;
+}
+
+
+/* 4: Columns */
+
+/* 2 columns per page ++++++++++++++++++++++++++++++++++++++++++++ */
+.one-half {
+    position: relative;
+    margin-right: 59px;
+    float: left;
+    margin-top: -10px; width: 300px;
+}
+.last {
+    width: 300px;
+    margin-top: -10px;
+    margin-right: 0 !important;
+    clear:right;
+}
+
+#bgmusic {
+    position: relative;
+    float: left;
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 600px;
+    height: 20px;
+}
