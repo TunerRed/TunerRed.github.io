@@ -45,7 +45,7 @@ a:hover  { outline: none; text-decoration: none; color: #555;  }
 a img { border: none; }
 
 /* button ++++++++++++++++++++++++++++++++++++++++++++ */
-button {
+input.button {
   background: #e3e3e3;
   border: 1px solid #bbb;
   -moz-border-radius: 3px;
@@ -64,7 +64,7 @@ button {
   width: 70px;
 }
 
-button:hover {
+input.button:hover {
   background: #d9d9d9;
   -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
   -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
@@ -73,8 +73,7 @@ button:hover {
   cursor: pointer;
 }
 
-button:hover { cursor: pointer; }
-button::-moz-focus-inner { border:0; }
+input.button::-moz-focus-inner { border:0; }
 
 /* bulleted list ++++++++++++++++++++++++++++++++++++++++++++ */
 ul.bullet { padding: 0 0 20px 0; display: block; overflow: hidden; }
