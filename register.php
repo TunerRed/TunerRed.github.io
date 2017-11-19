@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>登录</title>
+    <title>注册</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all" />
     <style>
@@ -78,9 +78,9 @@
             font-size: 10px;
             text-align: center;
 
-	        float: left;
-	        font: 12px Arial;
-	        color: #fff;
+            float: left;
+            font: 12px Arial;
+            color: #fff;
         }
 
     </style>
@@ -92,17 +92,17 @@
 <div id="container">
     <div id="wrapper">
         <section class="login">
-            <div class="titulo">登录</div>
+            <div class="titulo">注册</div>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
                 <input type="text" required  placeholder="Username(10 chars)" name="user">
                 <input type="password" required placeholder="Password(10 chars)" name="password">
-                <a class="olvido" href="register.php">注册</a>
-	            <input type="submit" class="enviar" value="登录">
+                <a class="olvido" href="login.php">登录</a>
+                <input type="submit" class="enviar" value="注册">
                 <?php
-                    $error = '<span\> *输入格式有误，请检查 </span\>';
+                $error = '<span\> *输入格式有误，请检查 </span\>';
                     if(check())
                     {
-						login($_POST['user'],$_POST['password']);
+                        register($_POST['user'],$_POST['password']);
                     }
                     echo $error;
                 ?>

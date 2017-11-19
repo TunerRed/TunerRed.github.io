@@ -7,7 +7,7 @@
 	<title>私信</title>
 </head>
 <body>
-<?php include("style/header.html"); ?>
+<?php include("style/header.php"); ?>
 
 <div id="container">
 	<div id="header1"></div>

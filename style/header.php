@@ -17,12 +17,31 @@
 			</li>
 			<li> | </li>
 			<li>
-				<a href="../login.php">登录</a>
+				<a href="../index.php">原作</a>
 			</li>
 			<li> | </li>
 			<li>
-				<a href="../index.php">原作</a>
+				<?php checkLogin();?>
 			</li>
 		</ul>
 	</div>
 </div>
+
+<?php
+function checkLogin()
+{
+	global $attr;
+	global $name;
+	if (isset($_COOKIE['d_user']) && $_COOKIE['d_user']!=NULL)
+	{
+		$name = "欢迎，<span style=\"color: #349e92;\">".$_COOKIE['d_user']."</span>";
+        $attr = ' href="/clearLogin.php" title="退出登录"';
+	}
+	else
+	{
+		$name = '欢迎登录';
+        $attr = ' href="/login.php" style="color:#fff;"';
+	}
+	echo '<a'.$attr.'>'.$name.'</a>';
+}
+?>

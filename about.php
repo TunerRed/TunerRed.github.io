@@ -21,12 +21,12 @@
 
 </head>
 <body>
-<?php include("style/header.html"); ?>
+<?php include("style/header.php"); ?>
 
 <div id="container">
     <div id="header1"></div>
     <div id="wrapper" style="background: rgba(150,150,150,0.3) repeat-y; margin-top: -40px">
-        <img style="margin-top: 20px" id="img_gif" src="style/images/gif/about.gif" />
+        <img style="margin-top: 20px" src="style/images/gif/about.gif" />
         <div class="divider"></div>
         <div>
             <p>■启动方法</p><br/>

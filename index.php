@@ -7,11 +7,10 @@
 
   <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all" />
   <script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
-
 </head>
 
 <body>
-  <?php include("style/header.html"); ?>
+  <?php include("style/header.php"); ?>
   
 
   <div id="container">
