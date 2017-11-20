@@ -8,7 +8,6 @@ $db;
 function connect()
 {
     global $con;
-    global $error;
     $con = mysqli_connect("localhost","root","root");
     if (!$con)
     {

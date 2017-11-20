@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="style/css/contact_style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/style/css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/style/css/contact_style.css" media="all" />
 	<title>私信</title>
 </head>
 <body>

@@ -142,14 +142,14 @@ img.left, img.featured-left , img.right, img.featured-right , img.featured-singl
 /* 2.Container */
 #container {
     min-height: 100%; height: auto !important; height: 100%;
-    padding: 0px 0px;
+    padding: 0px 10px;
     margin: 0px auto -57px;
 }
 
 /* 3: Footer */
 
-#footer-wrapper, .push { height: 57px; clear: both;/* .must be the same height as .footer */ }
-#footer-wrapper { height: 45px; padding-top:10px; }
+#footer-wrapper, .push { height: 57px; clear: both;}
+#footer-wrapper { height: 45px; padding-top:10px; margin-top: 10px; }
 #footer { min-width: 960px; height: 45px;
     background-color: black;
     border-top: #efebe8 dotted 1px;}
@@ -162,8 +162,8 @@ img.left, img.featured-left , img.right, img.featured-right , img.featured-singl
 
 
 /* 2.1 head background*/
-#header {width: 960px; height: 45px; margin: 0px auto 80px auto; }
-#header1 {width: 960px; height: 1px; margin: 0px auto 80px auto; }
+#header {width: 960px; height: 45px; margin: 0px auto 80px auto;}
+#header1 {width: 960px; height: 1px; margin: 0px auto 80px auto;}
 
 /* 2.2 head guide */
 ul.guide {margin: 20px 10px 0px 0px; float: right; }
@@ -279,13 +279,4 @@ img.star { margin-top: 0px; float: right; }
     margin-top: -10px;
     margin-right: 0 !important;
     clear:right;
-}
-
-#bgmusic {
-    position: relative;
-    float: left;
-    margin-left: 300px;
-    margin-top: 20px;
-    width: 600px;
-    height: 20px;
 }

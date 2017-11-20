@@ -1,0 +1,133 @@
+#wrapper {
+    background: rgba(150,150,150,0.3) repeat-y; margin-top: -40px;
+}
+#wrapper p {
+    text-align: center; font-size: 30px; padding-top: 20px;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -43px;
+}
+
+.comment {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #1e1e1e;
+    float: left;
+    background-color: #2d2d2d;
+}
+
+.user_info {
+    float: left;
+    width: 130px;
+    text-align: center;
+    padding: 0 20px 0 10px;
+
+}
+.user_info .user_head {
+    margin: 15px 21px 10px 21px;
+    padding: 25px;
+    border: 1px solid #bfbfbf;
+    background-image: url("../images/pic/05.png");
+}
+
+.user_info .user_name {
+    color: #FFFFFF;
+}
+
+.user_comment {
+    float: left;
+    padding: 0 20px 0 10px;
+    width: 766px;
+    background-color: #444444;
+}
+.user_comment .main_comment {
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+.user_comment .reply_comment {
+    margin-left: 50px;
+    padding: 2px 0px 2px 5px;
+    border-bottom: 1px dotted #6B777C;
+    background-color: #2d2d2d;
+}
+
+.user_comment .reply_button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    bottom: 0;
+    border: solid 1px #4eb2a8;
+    color: #bfbfbf;
+}
+
+.user_comment .reply_button input{
+    width: 728px;
+    height: 100%;
+    border:0;
+    border-left: 1px solid #4eb2a8;
+    margin-left: 5px;
+    background-color: #444444;
+    color: #bfbfbf;
+}
+
+.line {
+    border-top: 1px solid #e8e8e8;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.more {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.more span {
+    padding: 25px;
+    border: solid 1px #4eb2a8;
+    background-color: #6B777C;
+    color: #e8e8e8;
+}
+
+.more span:hover {
+    cursor: pointer;
+}
+
+form .editor #editor_area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 100px;
+    border: 0;
+}
+
+form .editor #editor_area textarea{
+    margin-left: auto;
+    margin-right: auto;
+    width: 797px;
+    height: 97px;
+    background-color: #6B777C;
+    border: 2px solid #54bbdd;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+form #editor_submit {
+    padding: 10px 25px 10px 25px;
+    background-color: #4eb2a8;
+    position: relative;
+    float: right;
+    margin: 20px 75px 10px 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: 0;
+}
+
+form #editor_submit:hover {
+    cursor: pointer;
+}

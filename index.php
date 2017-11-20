@@ -68,7 +68,7 @@
                 <div class="panes">
                   <div>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/download-jar.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
                     <div class="one-half last">
                       <p>最快捷简便的游戏启动方式，适用于所有已安装Java的电脑，不限平台</p>
@@ -78,7 +78,7 @@
                   </div>
                   <div hidden>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/download-exe.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
                     <div class="one-half last">
                       <p>EXE版本的游戏，适用于多数未安装jvm虚拟机的Windows系统电脑</p>
@@ -88,7 +88,7 @@
                   </div>
                   <div hidden>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/download-src.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
                     <div class="one-half last">
                       <p>本游戏的源代码版本，使用Java语言编写，使用了awt和swing等技术，使用MVC架构。
@@ -111,7 +111,7 @@
                 <div class="panes">
                   <div>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/00.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
 
                     <div class="one-half last">
@@ -124,7 +124,7 @@
                     <div class="divider3"></div>
 
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/03.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
 
                     <div class="one-half last">
@@ -137,7 +137,7 @@
                   </div>
                   <div hidden>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/02.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
 
                     <div class="one-half last">
@@ -150,7 +150,7 @@
                     <div class="divider3"></div>
 
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/04.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
 
                     <div class="one-half last">
@@ -159,12 +159,23 @@
                       注意只解锁不查看的话是不会出发真结局的。</p>
 
                     </div>
+	                  <div class="clear"></div>
+	                  <div class="divider3"></div>
+
+	                  <div class="one-half">
+		                  <img src="style/images/pic/05.png" alt="" width="280" height="210" class="featured-left" />
+	                  </div>
+
+	                  <div class="one-half last">
+		                  <p>预祝您通关真结局！</p>
+
+	                  </div>
 
                     <div class="clear"></div>
                   </div>
                   <div hidden>
                     <div class="one-half">
-                      <img src="style/images/featured.jpg" alt="" width="280" height="210" class="featured-left" />
+                      <img src="style/images/pic/01.png" alt="" width="280" height="210" class="featured-left" />
                     </div>
 
                     <div class="one-half last">
