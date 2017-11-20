@@ -8,7 +8,7 @@ $comment_start = 0;
 $total_comments = 0;
 $comments = array();
 function submit_comment($str){
-	
+
 }
 function submit_reply($comment_id,$str){
 
@@ -43,9 +43,12 @@ function check_n_comments(){
     return 0;
 }
 function showComments(){
+    global $output;
+    $output = '';
 	for ($i = 0; $i < 3; $i++)
-	echo '
-    <div class="comment">
+	{
+        $output.= '
+            <div class="comment">
 		        <div class="user_info">
 			        <div class="user_head">head</div>
 			        <div class="user_name">name</div>
@@ -56,15 +59,21 @@ function showComments(){
 			        <div class="reply_comment">reply1</div>
 			        <div class="reply_comment">reply2</div>
 			        <form action="'
-							.htmlspecialchars($_SERVER["PHP_SELF"].
-								"?kind=reply&id="."u00".$i)
-							.'" method="post">
-				        <div class="reply_button">回复<input type="text"></div>
+            .htmlspecialchars($_SERVER["PHP_SELF"].
+                "?kind=reply&id="."u00".$i)
+            .'" method="post">
+				        <div class="reply_button">';
+
+        if(isset($_COOKIE['d_user']))
+            $output.= '回复<input type="text">';
+
+        $output.= '</div>
 			        </form>
 		        </div>
 	        </div>
-	        <div class="clear"></div>
-	        ';
+	        <div class="clear"></div>';
+	}
+    echo $output;
 }
 
 ?>
@@ -123,7 +132,13 @@ function showComments(){
 	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]."?kind=comment")?>">
 			<div class="editor">
 			    <div id="editor_area"><textarea value="editor" ></textarea></div>
-			    <input id="editor_submit" type="submit" value="push">
+				<?php
+				if (isset($_COOKIE['d_user']))
+					echo '<input id="editor_submit" type="submit" value="push">';
+				else
+					echo '<div id="editor_submit">请先登录</div>'
+				?>
+
             </div>
 	    </form>
 

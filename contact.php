@@ -20,7 +20,7 @@
 		<div class="contact">
 			<form id="submitform" method='post' action='<?php echo $_SERVER['PHP_SELF']?>' name="submitform">
 				<p class="label">Name</p>
-				<input id='form_name' type='text' name='name' />
+				<input id='form_name' type='text' name='name' value="<?php if(isset($_COOKIE['d_user']))echo $_COOKIE['d_user'];?>"/>
 				<br>
 				<p class="label">Email <span>*</span></p>
 				<input id='form_email' type='text' name='email' />
