@@ -1,9 +1,8 @@
 <?php
+global $username;
+global $password;
 $username = $_POST['user'];
 $password = $_POST['password'];
-$error;
-$con;
-$db;
 
 function connect()
 {
@@ -11,6 +10,7 @@ function connect()
     $con = mysqli_connect("localhost","root","root");
     if (!$con)
     {
+        echo "<script type='text/javascript'>alert('Could not connect')</script>";
         die('Could not connect: ' . mysqli_error());
         return false;
     }
@@ -18,7 +18,11 @@ function connect()
     global $db;
     $db = mysqli_select_db($con, 'web');
     if (!$db)
+    {
+        echo "<script type='text/javascript'>alert('could not connect to the db')</script>";
         die("could not connect to the db:".mysqli_error($db));
+    }
+
     return true;
 }
 
@@ -37,6 +41,8 @@ function check()
 
 function login($u,$p)
 {
+    if (isset($_COOKIE['d_user']))
+        return;
     global $error,$con;
     if(connect())
     {
@@ -51,21 +57,18 @@ function login($u,$p)
                 echo "<script language='javascript' type='text/javascript'>window.location.href='$_url'</script>";
                 $error = '<span\>*登录成功</span\>';
             }
-            else
-            {
-                $error = '<span\>*登录失败，请检查用户名密码是否正确</span\>';
-            }
         }
         else
         {
-            $error = '<span\>*登录失败，请重新尝试</span\>';
-            die(mysqli_error($con));
+            $error = '<span\>*登录失败，请检查用户名密码是否正确</span\>';
         }
     }
 }
 
 function register($u,$p)
 {
+    if (isset($_COOKIE['d_user']))
+        return;
     global $error,$con;
     if(connect())
     {
@@ -79,11 +82,13 @@ function register($u,$p)
         }
         else
         {
-            mysqli_query($con,"INSERT INTO login VALUES ('$u','$p')");
+            $head_pic = 'gs ('.random_int(1,734).').gif';
+            mysqli_query($con,"INSERT INTO login VALUES ('".$u."','".$p."','".$head_pic."')");
             setcookie('d_user',$u);
             setcookie('d_password',$p);
+            setcookie('d_head',$head_pic);
             $_url = "index.php";
-            echo "<script language='javascript' type='text/javascript'>window.location.href='$_url'</script>";
+            echo "<script language='javascript' type='text/javascript'>setTimeout(window.location.href='$_url',1000);</script>";
             $error = '<span\>*注册成功</span\>';
         }
     }
